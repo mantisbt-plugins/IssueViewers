@@ -1,0 +1,8 @@
+$s_plugin_IssueViewers_viewed_by = 'Users who viewed this issue';
+$s_plugin_IssueViewers_user_list = 'User List';
+
+$s_plugin_IssueViewers_no_views = 'No users viewed this issue';
+$s_plugin_IssueViewers_total_views = 'Total Views';
+$s_plugin_IssueViewers_last_view = 'Last View';
+
+?>
