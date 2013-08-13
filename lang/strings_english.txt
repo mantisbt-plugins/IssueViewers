@@ -1,3 +1,5 @@
+<?php
+
 $s_plugin_IssueViewers_viewed_by = 'Users who viewed this issue';
 $s_plugin_IssueViewers_user_list = 'User List';
 
