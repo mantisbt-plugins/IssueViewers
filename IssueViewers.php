@@ -98,7 +98,7 @@ class IssueViewersPlugin extends MantisPlugin {
 						echo plugin_lang_get( 'no_views' );
 					} else {
 						foreach ( $viewers as $user_id => &$count ) {
-							$count = ( ( $user_id != 'anon' ) ? print_user( $user_id ) : lang_get( 'anonymous' ) ) . " (" . $count . "x)";
+							$count = ( ( $user_id != 'anon' ) ? prepare_user_name( $user_id ) : lang_get( 'anonymous' ) ) . " (" . $count . "x)";
 				 		}
 				 		echo implode( ', ',$viewers );
 			 		}
