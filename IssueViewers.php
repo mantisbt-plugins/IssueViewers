@@ -24,7 +24,8 @@ class IssueViewersPlugin extends MantisPlugin {
 	function hooks() {
 		return array(
 			'EVENT_VIEW_BUG_DETAILS'	=> 'store_viewer',
-			'EVENT_VIEW_BUG_EXTRA'		=> 'display_viewers'
+			'EVENT_VIEW_BUG_EXTRA'		=> 'display_viewers',
+			'EVENT_MENU_MAIN'  => 'print_menu_issueviews'
 		);
 	}
 
@@ -128,4 +129,16 @@ class IssueViewersPlugin extends MantisPlugin {
 			</table>';
 		collapse_end( 'viewers' );
 	}
+	/*
+	 * Default plugin configuration.
+	 */
+
+	function print_menu_issueviews( ) {
+		$t_links = array();
+		$t_page = plugin_page( 'index' );
+		$t_lang = plugin_lang_get( 'menu_issueviews' );
+		$t_links[] = "<a href=\"$t_page\">$t_lang</a>";
+		return $t_links;
+	}
+	
 }
